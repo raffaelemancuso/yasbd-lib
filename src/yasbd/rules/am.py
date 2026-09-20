@@ -47,13 +47,18 @@ class AmRules(Rules):
 
     POST_QUOTATIVE_PARTICLES = {
         # Standalone Converb Quotatives ("Saying...", placed after a quote)
-        "ብሎ", "ብላ", "ብለው", "ብዬ", "ብለን", "ብላችሁ",
+        "ብሎ", "ብላ", "ብለው", "ብዬ", "ብለን", "ብላችሁ", "ብለህ", "ብለሽ",
 
         # Active/Imperfect Quotative Verbs ("While saying / As says")
         "ሲል", "ስትል", "ሲሉ", "ስል",
 
         # Subordinating Prefix (Matches "that...", attached to verbs)
         "እንደ-",    # inde- (e.g., እንደተናገረው - "as he said")
+    }
+
+    REPORTING_WORDS = {
+        "አለ", "አሉ", "አለች", "አልኩ", "አልን", "አልክ", "አልሽ", "አላችሁ",
+        "ይላል", "ትላለች", "ይላሉ", "እላለሁ", "እንላለን",
     }
 
 # fmt: on
