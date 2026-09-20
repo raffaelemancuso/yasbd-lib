@@ -13,7 +13,6 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/speedyk-005/yasbd-lib/badge)](https://www.codefactor.io/repository/github/speedyk-005/yasbd-lib)
 [![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=flat&logo=reddit&logoColor=white)
@@ -26,44 +25,44 @@
 <details>
 <summary>📑 Table of Contents (Click me!)</summary>
 
-- [📝 Manifesto](#-manifesto)
+- [Manifesto](#manifesto)
   - [✂ Why do I need a pair of "smart scissors" for text?](#-why-do-i-need-a-pair-of-smart-scissors-for-text)
-  - [🔪 Are these shears just a rusty regex loop spray-painted in carbon fiber?](#-are-these-shears-just-a-rusty-regex-loop-spray-painted-in-carbon-fiber)
+  - [Are these shears just a rusty regex loop spray-painted in carbon fiber?](#are-these-rusty-regex)
 - [💡 Use Cases](#-use-cases)
-- [🌐 Supported Languages](#-supported-languages-api)
+- [🌐 Supported Languages (API)](#-supported-languages-api)
   - [How Language Profiles Are Built](#how-language-profiles-are-built)
-- [📊 Benchmarks](#-benchmarks)
+- [Benchmarks](#benchmarks)
 - [📥 Installation](#-installation)
   - [The Quick & Easy Way](#the-quick--easy-way)
   - [The From-Source Way](#the-from-source-way)
   - [Want to Help Make yasbd Even Better?](#want-to-help-make-yasbd-even-better)
-- [📟 Usage](#-usage-api)
+- [Usage (API)](#usage)
   - [Initialization](#initialization)
   - [Core Methods](#core-methods)
     - [Boundary detection](#boundary-detection)
     - [Segmentation](#segmentation)
-  - [Cleaner](#cleaner-api)
-  - [CLI](#cli-api)
+  - [Cleaner (API)](#cleaner-api)
+  - [CLI (API)](#cli-api)
     - [About JSONL](#about-jsonl)
-  - [Adapter](#adapter-api)
-  - [spaCy component](#spacy-component-api)
-- [📦 Lang Packs](#-lang-packs-api)
+  - [Adapter (API)](#adapter-api)
+  - [spaCy component (API)](#spacy-component-api)
+- [📦 Lang Packs (API)](#-lang-packs-api)
   - [Official Lang Packs](#official-lang-packs)
-- [🔗 Integrations & Ecosystem](#-integrations--ecosystem)
-- [🤝 Contributors](#-contributors)
-- [📜 Last note](#-last-note)
+- [Integrations & Ecosystem](#integrations-and-ecosystem)
+- [Contributors](#contributors)
+- [Last note](#last-note)
 
 </details>
 
 ---
 
-## 📝 Manifesto
+## <a name="manifesto"></a><img src="https://raw.githubusercontent.com/speedyk-005/yasbd-lib/main/assets/header_icons/header_icon_1.png" alt="Bullseye" width="5%" /> Manifesto
 
 **Y**et **A**nother **S**entence **B**oundary **D**etector is a pair of smart scissors for text. Pointer-based, from-scratch [SBD](https://en.wikipedia.org/wiki/Sentence_boundary_disambiguation) for production NLP pipelines. Features a drop-in adapter for pysbd to fix edge cases without heavy refactoring.
 
 It was born out of [chunklet-py](https://github.com/speedyk-005/chunklet-py/pull/49), an all-in-one chunker for sentences, documents, and code.
 
-###  ✂ Why do I need a pair of "smart scissors" for text?
+###   ✂ Why do I need a pair of "smart scissors" for text?
 
 Running `re.split(r'(?<=[.!?])(?=\s+[A-Z])')` and praying. This blunt tool instantly shears titles like `Mr. Smith` or French corporate markers like `Sté. Générale` in half, scattering semantic fragments across the pipeline.
 
@@ -78,7 +77,7 @@ Punctuation is the most overloaded glyph set in text. A period alone does six jo
 
 And multilingual quirks a naive splitter never saw coming.
 
-### 🔪 Are these shears just a rusty regex loop spray-painted in carbon fiber?
+### <a name="are-these-rusty-regex"></a><img src="https://raw.githubusercontent.com/speedyk-005/yasbd-lib/main/assets/header_icons/header_icon_2.gif" width="5%"> Are these shears just a rusty regex loop spray-painted in carbon fiber?
 
 Nope!! It is a two-pass pipeline:
 
@@ -182,7 +181,7 @@ Candidate abbreviations are collected from all sources, classified by type (`TIT
 
 ---
 
-## 📊 Benchmarks
+## <a name="benchmarks"></a><a href="https://github.com/Hunterdii"><img src="https://raw.githubusercontent.com/speedyk-005/yasbd-lib/main/assets/header_icons/header_icon_3.png" width="5%"></a> Benchmarks
 
 Tested against 7 competitors (pysbd, sentencex, sentsplit, nupunkt, blingfire, sentence-splitter, spaCy-sentencizer) across multiple languages and 7 edge cases: compound abbreviations, CJK quotes, newline wrapping, chat logs, URLs, decimals, and nested punctuation.
 
@@ -217,7 +216,7 @@ That's it! Blade is armed.
 Prefer building from source? Clone and install manually for full control:
 
 ```bash
-git clone https://github.com/speedyk-005/yasbd-lib.git
+git clone [https://github.com/speedyk-005/yasbd-lib.git](https://github.com/speedyk-005/yasbd-lib.git)
 cd yasbd-lib
 pip install .
 ```
@@ -231,7 +230,7 @@ That's awesome. See [**Contributing Guide**](https://github.com/speedyk-005/yasb
 
 ---
 
-## 📟 Usage ([API](https://github.com/speedyk-005/yasbd-lib/blob/main/API_REFERENCES.md#yasbdboundary_detector))
+## <a name="usage"></a><img src="https://raw.githubusercontent.com/speedyk-005/yasbd-lib/main/assets/header_icons/header_icon_4.png" width="7%" /> Usage ([API](https://github.com/speedyk-005/yasbd-lib/blob/main/API_REFERENCES.md#yasbdboundary_detector))
 
 > [!TIP]
 > Not a Pythonista? Jump straight to the [CLI](#cli-api) section.
@@ -252,7 +251,7 @@ detector = BoundaryDetector(lang="en")
 detector = BoundaryDetector(
     # ISO 639 code (e.g., en, fr, es, ...). Required.
     # Use "auto" for automatic detection.
-    # https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
+    # [https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)
     lang="fr",
 
     # Optional external language pack modules to load. Defaults to `None`.
@@ -261,7 +260,7 @@ detector = BoundaryDetector(
     external_lang_packs=["yasbd_auxlang"],
 
     # Don't split inside them. (It won't protect block quotes) Defaults to `True`.
-    # https://en.wikipedia.org/wiki/Block_quotation
+    # [https://en.wikipedia.org/wiki/Block_quotation](https://en.wikipedia.org/wiki/Block_quotation)
     preserve_quote_and_paren=True,
 
     # Enable verbose logging. Defaults to `False`.
@@ -371,7 +370,7 @@ print(res)
 > from yasbd.utils.paragraph_stream import ParagraphStream  # or yasbd.paragraph_stream
 >
 > for para in ParagraphStream(text):  # or an opened file
->     print(para)  # each paragraph block
+>      print(para)  # each paragraph block
 > ```
 > You can also skip empty lines with `skip_empty_lines=True`
 
@@ -617,7 +616,7 @@ Want to build a lang pack? Start with the [language template](https://github.com
 
 ---
 
-## 🔗 Integrations & Ecosystem
+## <a name="integrations-and-ecosystem"></a><img src="https://raw.githubusercontent.com/speedyk-005/yasbd-lib/main/assets/header_icons/header_icon_5.gif" width="5%"> Integrations & Ecosystem
 
 * 🔵 **[spaCy Component](#spacy-component):** Plug `yasbd` straight into any spaCy v3+ pipeline as a fast sentence segmenter.
 * 📦 **[Lang Packs](#-lang-packs):** Plug in modular rule sets (like `yasbd-auxlang`) for extended language support.
@@ -629,7 +628,7 @@ Want to build a lang pack? Start with the [language template](https://github.com
 
 ---
 
-## 🤝 Contributors
+## <a name="contributors"></a><img src="https://raw.githubusercontent.com/speedyk-005/yasbd-lib/main/assets/header_icons/header_icon_6.png" alt="Handshake" width="4%" /> Contributors
 
 See [**CONTRIBUTORS.md**](CONTRIBUTORS.md) for the full list.
 
@@ -637,7 +636,7 @@ Interested in contributing? See the [**Contributing Guide**](https://github.com/
 
 ---
 
-## 📜 Last note
+## <a name="last-note"></a><img src="https://raw.githubusercontent.com/speedyk-005/yasbd-lib/main/assets/header_icons/header_icon_7.gif" width="5%"> Last note
 
 **yasbd** is maintained by [speedyk-005](https://github.com/speedyk-005). Licensed under [Mozilla Public License 2.0](https://github.com/speedyk-005/yasbd-lib/blob/main/LICENSE).
 
