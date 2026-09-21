@@ -4,7 +4,6 @@ A massive thank you to the open source community helping make `yasbd` more accur
 
 | Name | Role |
 |------|------|
-| **[@speedyk-005](https://github.com/speedyk-005)** | Maintainer & Creator |
 | **[@1cbyc](https://github.com/1cbyc)** | Coordinate direction abbreviation fix |
 | **[@AshSgDe29071999](https://github.com/AshSgDe29071999)** | Combined same-module imports in `__init__.py`; named cleaning-pipeline helpers for testability |
 | **[@be-student](https://github.com/be-student)** | Burmese double-comma boundaries; shared numeric-context tel/fax and Portuguese aprox abbreviation fixes |
@@ -12,7 +11,7 @@ A massive thank you to the open source community helping make `yasbd` more accur
 | **[@cnaples79](https://github.com/cnaples79)** | Missing comma in set literals fix |
 | **[@ColumbusLabs](https://github.com/ColumbusLabs)** | Preserve word boundaries across StreamCleaner line breaks |
 | **[@ddelrio1986](https://github.com/ddelrio1986)** | Spelling and grammar fixes in docs |
-| **[@DYNOSuprovo](https://github.com/DYNOSuprovo)** | Swahili address + currency and German/Dutch unit abbreviations fix; Amharic quotative construction improvements; sentence modification example | 
+| **[@DYNOSuprovo](https://github.com/DYNOSuprovo)** | Swahili address + currency and German/Dutch unit abbreviations fix; Amharic quotative construction improvements; sentence modification example |
 | **[@HarshRajSinghania](https://github.com/HarshRajSinghania)** | Russian/Ukrainian `стор.` and `кв.` reference abbreviations |
 | **[@HeaTTap](https://github.com/HeaTTap)** | Line ending normalization in default cleaning pipeline; removed destructive slash normalization from StreamCleaner |
 | **[@hkJerryLeung](https://github.com/hkJerryLeung)** | French `est` abbreviation fix |
@@ -25,13 +24,14 @@ A massive thank you to the open source community helping make `yasbd` more accur
 | **[@MasRama](https://github.com/MasRama)** | Double boundary for `.\n` fix |
 | **[@Mayankshrey438](https://github.com/Mayankshrey438)** | Armenian language support & flattened list heuristic |
 | **[@MohammedAnasNathani](https://github.com/MohammedAnasNathani)** | Documentation for built-in language freeze |
-| **[@NataliaPerez08](https://github.com/NataliaPerez08)** | Deduplicate offsets before sorting in `BoundaryDetector._run_hook()` to keep boundaries unique |
 | **[@Nagulanvelu](https://github.com/Nagulanvelu)** | Lithuanian number-first section markers fix |
+| **[@NataliaPerez08](https://github.com/NataliaPerez08)** | Deduplicate offsets before sorting in `BoundaryDetector._run_hook()` to keep boundaries unique |
 | **[@nightcityblade](https://github.com/nightcityblade)** | Inline example abbreviation fixes for Hindi, Lithuanian, Malayalam, and Russian |
 | **[@Rajesh270712](https://github.com/Rajesh270712)** | Base + English rule contributions |
 | **[@revanthajoe](https://github.com/revanthajoe)** | ASR/Transcript Segmentation Example |
 | **[@sanmaxdev](https://github.com/sanmaxdev)** | Language tag normalization helper |
 | **[@sonalisrisivani](https://github.com/sonalisrisivani)** | Unicode newline-inside-sentence detection fix |
+| **[@speedyk-005](https://github.com/speedyk-005)** | Maintainer & Creator |
 | **[@terminalchai](https://github.com/terminalchai)** | Burmese and Thai reporting words fix |
 | **[@XEDAB](https://github.com/XEDAB)** | Replaced manual adjacent boundary iteration with `itertools.pairwise` |
 | **[@YuEfSaEDU](https://github.com/YuEfSaEDU)** | Afrikaans/Dutch title `Mev.` abbreviation fix; Marathi and Bengali section markers |
