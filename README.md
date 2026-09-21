@@ -7,7 +7,7 @@
 [![PyPI](https://img.shields.io/pypi/v/yasbd-lib?kill_cache=2)](https://pypi.org/project/yasbd-lib)
 [![PyPI Downloads](https://static.pepy.tech/personalized-badge/yasbd-lib?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/yasbd-lib)
 [![Coverage Status](https://coveralls.io/repos/github/speedyk-005/yasbd-lib/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/speedyk-005/yasbd-lib?branch=main)
-[![Stability](https://img.shields.io/badge/stability-beta-yellow)](https://github.com/speedyk-005/yasbd-lib)
+[![Stability](https://img.shields.io/badge/stability-stable-brightgreen)](https://github.com/speedyk-005/yasbd-lib)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/speedyk-005/yasbd-lib/actions)
 [![lint](https://github.com/speedyk-005/yasbd-lib/actions/workflows/lint.yml/badge.svg)](https://github.com/speedyk-005/yasbd-lib/actions/workflows/lint.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/speedyk-005/yasbd-lib/badge)](https://www.codefactor.io/repository/github/speedyk-005/yasbd-lib)
