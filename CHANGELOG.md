@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- **`_output` doctest on Windows** ([#336](https://github.com/speedyk-005/yasbd-lib/pull/336)): The doctest left the `NamedTemporaryFile` handle open, so `os.unlink` raised `WinError 32` and `pytest` failed on Windows. The handle is now closed before writing, and the verification read uses an explicit `utf-8` encoding.
+
+---
+
 ## [1.0.0] - 2026-21-09
 
 ### Fixed
