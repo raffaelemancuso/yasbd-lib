@@ -54,9 +54,11 @@ git checkout -b feature/my-feature-branch
 git checkout -b bugfix/issue-number-description
 ```
 
-### Add a New Language Module
+### Add a New Language Module (Core Locked)
 
-Copy [`src/yasbd/rules/_template.py`](src/yasbd/rules/_template.py) to `src/yasbd/rules/{lang}.py`, rename the class to `{Lang}Rules`, fill in the sets your language needs, and add test data to `tests/test_data/{lang}.py`. Auto-discovered at runtime, no registration needed.
+The core language set is frozen for stable releases. New languages will only be added to the core library directly if the core maintainers judge it strictly necessary based on internal roadmap needs, bypassing the PR/issue intake pipeline entirely. For everyone else, language additions must be packaged externally.
+
+See [Lang-packs documentation](https://github.com/speedyk-005/yasbd-lib#-lang-packs-api).
 
 ### Run Diagnostics
 
@@ -148,7 +150,7 @@ All public interface controls must be documented using Google-style docstrings. 
 
 A few rules keep the review queue running smoothly:
 
-- Keep no more than three pull requests open at once. If you are at the limit, merge one before opening the next. A pile of unmerged branches only gums up the queue and drags out reviews.
+- Keep no more than two pull requests open at once. If you are at the limit, merge one before opening the next. A pile of unmerged branches only gums up the queue and drags out reviews.
 - A PR that has been reviewed and then sits unfixed for weeks may be closed or superseded. Review comments are a request for action, not a suggestion. If you cannot get back to it promptly, say so, and we will decide whether to close it or hand it to someone else.
 - If multiple pull requests address the same issue, we evaluate them based on code quality and test coverage. If the implementations are structurally identical, we merge the earliest submission.
 - Use the [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) when submitting.
@@ -156,6 +158,7 @@ A few rules keep the review queue running smoothly:
 - Prefer extending existing test files and doctests over adding new test files. A new test file for a small change adds review overhead and fragments coverage; add cases to the tests that already cover the module instead.
 - Start PR branches from a clean `main`, not from a branch that carries changes from past edits or other PRs. A branch polluted with unrelated commits makes the diff noisy and hard to review.
 - When you add or edit a `CHANGELOG.md` entry, link to the pull request that ships the change, not the issue: use the `pull/NNN` URL. The issue may predate the fix; the PR number identifies the actual change that lands.
+- Keep pull requests strictly atomic. One logical change per pull request; kitchen-sink PRs combining unrelated bugfixes, refactoring, and feature modifications will be closed on sight.
 
 ## Conduct
 
